@@ -2,13 +2,13 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/C
+      - image: circleci/c
     steps:
       - checkout
       - run: main.cpp
   test:
     docker:
-      - image: circleci/C
+      - image: circleci/c
     steps:
       - checkout
       - run: main.cpp
