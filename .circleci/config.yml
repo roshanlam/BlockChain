@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/C
+    steps:
+      - checkout
+      - run: main.cpp
+  test:
+    docker:
+      - image: circleci/C
+    steps:
+      - checkout
+      - run: main.cpp
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test
